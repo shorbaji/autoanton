@@ -4,13 +4,20 @@ Irrigation water balance calculator for wheat fields. Uses WAPOR-3 satellite dat
 
 ## Setup
 
-### 1. Install dependencies
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/shorbaji/autoanton.git
+cd autoanton
+```
+
+### 2. Install dependencies
 
 ```bash
 uv sync
 ```
 
-### 2. Authenticate with Google Cloud
+### 3. Authenticate with Google Cloud
 
 WAPOR-3 raster data is fetched from Google Cloud Storage. Authenticate with:
 
@@ -18,7 +25,7 @@ WAPOR-3 raster data is fetched from Google Cloud Storage. Authenticate with:
 gcloud auth application-default login
 ```
 
-### 3. Configure Supabase
+### 4. Configure Supabase
 
 Create a `.env` file in the project root:
 
@@ -27,7 +34,7 @@ SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_PUBLISHABLE_KEY=your_publishable_key
 ```
 
-### 4. Required data files
+### 5. Required data files
 
 - `fields.geojson` — field boundaries (16 fields, A-1 through D-4)
 - `kc.csv` — crop coefficient (Kc) values by date and field
